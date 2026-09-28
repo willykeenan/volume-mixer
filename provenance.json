@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "ke.native-component-provenance.v1",
+  "product": "KE Volume Mixer",
+  "bundleId": "dev.kestudios.volume-mixer",
+  "upstream": {
+    "name": "dB",
+    "repository": "https://github.com/routsiddharth/dB",
+    "revision": "ac95a751686c68aa161a01244e083daf0d939350",
+    "license": "MIT",
+    "retrievedAt": "2026-07-29"
+  },
+  "appleApi": {
+    "name": "Core Audio process taps",
+    "minimumMacOS": "14.4",
+    "permission": "Screen & System Audio Recording"
+  },
+  "launchAtLogin": {
+    "developerIDPath": "SMAppService.mainApp",
+    "previewPath": {
+      "kind": "current-user-launch-agent",
+      "label": "dev.kestudios.volume-mixer.login",
+      "executable": "/Applications/KE Volume Mixer.app/Contents/MacOS/KEVolumeMixer",
+      "runAtLoad": true,
+      "keepAlive": false,
+      "shell": false,
+      "elevatedPrivilege": false
+    }
+  },
+  "claims": {
+    "savesAudio": false,
+    "sendsAudio": false,
+    "telemetry": false,
+    "networkClient": false,
+    "kernelExtension": false,
+    "virtualAudioDriver": false
+  }
+}

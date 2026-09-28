@@ -1,0 +1,67 @@
+KE Volume Mixer 0.1.1 — FREE MAC PREVIEW
+
+STATUS
+This Preview is ad-hoc signed and is not Apple notarized. It is not a
+production-ready or App Store release. K&E Studios publishes the SHA-256
+digest beside the download so you can verify the exact file.
+
+REQUIREMENTS
+- macOS 14.4 or later
+- Apple Silicon or Intel Mac
+- Screen & System Audio Recording permission
+
+INSTALL
+1. Drag KE Volume Mixer.app to Applications.
+2. In Applications, Control-click KE Volume Mixer and choose Open.
+3. Confirm Open. If macOS offers only Open Anyway, use System Settings >
+   Privacy & Security > Open Anyway, then reopen the app.
+4. Allow System Audio Recording when macOS asks. The app reads app output
+   buffers so it can meter and adjust volume. Audio is processed locally;
+   it is never saved or sent.
+5. Use the speaker/waveform icon in the top-right menu bar.
+
+OPTIONAL LAUNCH AT LOGIN
+The clearly labeled Launch at Login (Preview) toggle writes one current-user
+file:
+
+  ~/Library/LaunchAgents/dev.kestudios.volume-mixer.login.plist
+
+It is bound to the exact app executable in /Applications, uses RunAtLoad only,
+and has no KeepAlive, shell, network, helper, or elevated privilege. The app
+verifies the file owner, mode, and exact contents and fails closed if they
+change. The Preview starts automatically at the next sign-in.
+
+VERIFY
+Run this in Terminal from the folder containing the downloaded DMG:
+
+  shasum -a 256 KE-Volume-Mixer-0.1.1-universal-preview.dmg
+
+Compare the result with the .sha256 file published beside the DMG on
+github.com/willykeenan/volume-mixer/releases.
+
+REMOVE OR ROLL BACK
+1. Quit KE Volume Mixer from its menu.
+2. Turn off Launch at Login first if you enabled it. This removes and boots out
+   only dev.kestudios.volume-mixer.login.
+3. Move /Applications/KE Volume Mixer.app to Trash.
+4. Optionally revoke it in System Settings > Privacy & Security >
+   Screen & System Audio Recording.
+5. Optionally remove its saved volume preferences:
+
+   defaults delete dev.kestudios.volume-mixer
+
+If the app was removed before its toggle was turned off, boot out the exact
+current-user label and delete only its exact plist:
+
+  launchctl bootout "gui/$(id -u)/dev.kestudios.volume-mixer.login"
+  rm -f "$HOME/Library/LaunchAgents/dev.kestudios.volume-mixer.login.plist"
+
+To roll back to an earlier Preview, remove this one, then install the older
+DMG from the same releases page. A future
+Developer ID signed and Apple-notarized build is a separate release gate.
+
+LICENSES
+KE-owned source is MIT licensed. The Core Audio process-tap foundation is
+derived from the MIT-licensed dB project by Siddharth Rout at pinned revision
+ac95a751686c68aa161a01244e083daf0d939350. Full license and provenance files
+are included inside the app bundle.
