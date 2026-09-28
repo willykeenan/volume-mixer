@@ -39,7 +39,7 @@ and follow you when you switch output devices.
 Verify the download against the `.sha256` file on the release page:
 
 ```zsh
-shasum -a 256 KE-Volume-Mixer-0.1.1-universal-preview.dmg
+shasum -a 256 KE-Volume-Mixer-0.1.2-universal-preview.dmg
 ```
 
 `READ ME — Preview.txt` inside the DMG covers removal and rollback.

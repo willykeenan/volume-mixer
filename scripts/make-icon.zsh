@@ -10,7 +10,12 @@ output="$asset_dir/AppIcon.icns"
 
 rm -rf "$iconset"
 mkdir -p "$iconset"
-swift "$script_dir/make-icon.swift" "$source_png"
+master="$root/Resources/AppIcon-1024.png"
+if [[ "$(sips -g pixelWidth -g pixelHeight "$master" | awk '/pixel/ {print $2}' | tr '\n' x)" != "1024x1024x" ]]; then
+  echo "icon master must be 1024x1024: $master" >&2
+  exit 1
+fi
+cp "$master" "$source_png"
 
 for spec in \
   "16 icon_16x16.png" \

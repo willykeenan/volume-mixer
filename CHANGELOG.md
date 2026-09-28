@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2 Preview — 2026-09-28
+
+- New app icon: three app tiles, each with its own volume level, in the
+  product's dark and mint colors. The icon master now lives in
+  `Resources/AppIcon.svg` and `Resources/AppIcon-1024.png`, and the build
+  packages it directly.
+
 ## 0.1.1 Preview — 2026-09-28
 
 - The in-app **KE Studios** link now opens this repository instead of a

@@ -1,4 +1,4 @@
-KE Volume Mixer 0.1.1 — FREE MAC PREVIEW
+KE Volume Mixer 0.1.2 — FREE MAC PREVIEW
 
 STATUS
 This Preview is ad-hoc signed and is not Apple notarized. It is not a
@@ -34,7 +34,7 @@ change. The Preview starts automatically at the next sign-in.
 VERIFY
 Run this in Terminal from the folder containing the downloaded DMG:
 
-  shasum -a 256 KE-Volume-Mixer-0.1.1-universal-preview.dmg
+  shasum -a 256 KE-Volume-Mixer-0.1.2-universal-preview.dmg
 
 Compare the result with the .sha256 file published beside the DMG on
 github.com/willykeenan/volume-mixer/releases.
