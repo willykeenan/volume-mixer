@@ -19,7 +19,7 @@ session, marks the ones actually producing sound, and gives each one a
 volume slider, mute, reset and a live meter. Levels are remembered per app
 and follow you when you switch output devices.
 
-- **Native and small.** SwiftUI and Core Audio, a 1.8 MB universal download for Apple silicon and Intel.
+- **Native and small.** SwiftUI and Core Audio, a 1 MB universal download for Apple silicon and Intel.
 - **No driver.** Uses Apple's Core Audio process taps (macOS 14.4+). No virtual audio device, kernel extension or restart.
 - **Private.** Audio is processed in memory and never saved or sent. No network client, account, analytics or telemetry.
 
