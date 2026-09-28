@@ -2,8 +2,8 @@
 
 <h1 align="center">KE Volume Mixer</h1>
 
-<p align="center">Turn down one app. Leave the rest alone.<br>
-A free, open-source per-app volume mixer for the macOS menu bar.</p>
+<p align="center"><b>A Windows-level volume mixer for Mac.</b><br>
+Per-app volume, mute and live meters in the menu bar. Free and open source.</p>
 
 <p align="center">
   <a href="https://github.com/willykeenan/volume-mixer/releases/latest"><b>Download for Mac</b></a> ·
